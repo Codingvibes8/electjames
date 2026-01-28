@@ -54,6 +54,12 @@ export default function Header() {
               {/* Dropdown Menu */}
               {servicesDropdownOpen && (
                 <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 py-2 fade-in">
+                  <Link
+                    href="/electrical-services-in-nw2"
+                    className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors font-semibold border-b border-gray-100"
+                  >
+                    All Services
+                  </Link>
                   {services.map((service) => (
                     <Link
                       key={service.href}
@@ -67,8 +73,12 @@ export default function Header() {
               )}
             </div>
 
-            <Link href="/electrical-services-in-nw2" className="text-gray-700 hover:text-primary font-medium transition-colors">
-              All Services
+            <Link href="/locations" className="text-gray-700 hover:text-primary font-medium transition-colors">
+              Locations
+            </Link>
+
+            <Link href="/blog" className="text-gray-700 hover:text-primary font-medium transition-colors">
+              Blog
             </Link>
             
             <Link href="#contact" className="text-gray-700 hover:text-primary font-medium transition-colors">
@@ -123,6 +133,12 @@ export default function Header() {
                 </button>
                 {servicesDropdownOpen && (
                   <div className="pl-4 mt-2 flex flex-col gap-2">
+                    <Link
+                      href="/electrical-services-in-nw2"
+                      className="text-gray-600 hover:text-primary transition-colors py-2 font-semibold"
+                    >
+                      All Services
+                    </Link>
                     {services.map((service) => (
                       <Link
                         key={service.href}
@@ -136,8 +152,12 @@ export default function Header() {
                 )}
               </div>
 
-              <Link href="/electrical-services-in-nw2" className="text-gray-700 hover:text-primary font-medium transition-colors py-2">
-                All Services
+              <Link href="/locations" className="text-gray-700 hover:text-primary font-medium transition-colors py-2">
+                Locations
+              </Link>
+
+              <Link href="/blog" className="text-gray-700 hover:text-primary font-medium transition-colors py-2">
+                Blog
               </Link>
               
               <Link href="#contact" className="text-gray-700 hover:text-primary font-medium transition-colors py-2">

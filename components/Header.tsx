@@ -1,0 +1,161 @@
+'use client';
+
+import Link from 'next/link';
+import { useState } from 'react';
+
+export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+
+  const services = [
+    { name: 'Air Conditioning Services', href: '/electrical-services-in-nw2/air-conditioning-services' },
+    { name: 'EV Charger Installation', href: '/electrical-services-in-nw2/electric-vehicle-installation' },
+    { name: 'Electrical Safety Certificates', href: '/electrical-services-in-nw2/electrical-safety-certificates' },
+    { name: 'Outdoor Lighting & Heating', href: '/electrical-services-in-nw2/outdoor-lighting-and-heating' },
+    { name: 'PAT Testing', href: '/electrical-services-in-nw2/pat-testing' },
+    { name: 'Flood Damage Assessment', href: '/electrical-services-in-nw2/flood-damage-electrical-assessment' },
+  ];
+
+  return (
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+      <nav className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <span className="text-2xl font-bold text-gray-900" style={{ fontFamily: 'var(--font-display)' }}>
+              Electric James
+            </span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-8">
+            <Link href="/" className="text-gray-700 hover:text-primary font-medium transition-colors">
+              Home
+            </Link>
+            
+            {/* Services Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setServicesDropdownOpen(true)}
+              onMouseLeave={() => setServicesDropdownOpen(false)}
+            >
+              <button className="text-gray-700 hover:text-primary font-medium transition-colors flex items-center gap-1">
+                Services
+                <svg className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              {/* Dropdown Menu */}
+              {servicesDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 py-2 fade-in">
+                  {services.map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link href="/electrical-services-in-nw2" className="text-gray-700 hover:text-primary font-medium transition-colors">
+              All Services
+            </Link>
+            
+            <Link href="#contact" className="text-gray-700 hover:text-primary font-medium transition-colors">
+              Contact
+            </Link>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center gap-4">
+            <a href="tel:07825447057" className="text-primary font-semibold hover:text-primary-dark transition-colors">
+              078 2544 7057
+            </a>
+            <a href="tel:02036623589" className="btn btn-accent">
+              Emergency Call
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2 text-gray-700 hover:text-primary"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {mobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden py-4 border-t border-gray-200 fade-in">
+            <div className="flex flex-col gap-4">
+              <Link href="/" className="text-gray-700 hover:text-primary font-medium transition-colors py-2">
+                Home
+              </Link>
+              
+              {/* Mobile Services */}
+              <div>
+                <button 
+                  className="text-gray-700 hover:text-primary font-medium transition-colors py-2 flex items-center justify-between w-full"
+                  onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                >
+                  Services
+                  <svg className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {servicesDropdownOpen && (
+                  <div className="pl-4 mt-2 flex flex-col gap-2">
+                    {services.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className="text-gray-600 hover:text-primary transition-colors py-2"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <Link href="/electrical-services-in-nw2" className="text-gray-700 hover:text-primary font-medium transition-colors py-2">
+                All Services
+              </Link>
+              
+              <Link href="#contact" className="text-gray-700 hover:text-primary font-medium transition-colors py-2">
+                Contact
+              </Link>
+
+              <div className="flex flex-col gap-3 pt-4 border-t border-gray-200">
+                <a href="tel:07825447057" className="btn btn-primary w-full">
+                  Call: 078 2544 7057
+                </a>
+                <a href="tel:02036623589" className="btn btn-accent w-full">
+                  Emergency: 020 3662 3589
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
+  );
+}

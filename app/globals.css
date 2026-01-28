@@ -1,26 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
 @import "tailwindcss";
 
-/* Design System - Light Theme with Stitch Colors */
+/* Design System - Original Electric James Colors */
 :root {
-  /* Primary Colors - Light Theme */
-  --color-primary: #1a73e8;
-  /* Google Blue */
-  --color-primary-dark: #1557b0;
-  --color-primary-light: #4285f4;
+  /* Primary Colors - Electric James Red */
+  --color-primary: #BC3931;
+  /* Electric James Brand Red */
+  --color-primary-dark: #9a2f28;
+  --color-primary-light: #d14439;
 
-  /* Accent Colors */
-  --color-accent: #ea4335;
-  /* Google Red for CTAs */
-  --color-accent-hover: #d33426;
+  /* Accent Colors - Electric James Blue */
+  --color-accent: #0C4DA2;
+  /* Electric James Blue for CTAs */
+  --color-accent-hover: #0a3d82;
+
+  /* Link Color */
+  --color-link: #21759B;
+  /* Electric James Link Blue */
+  --color-link-hover: #1a5f7d;
 
   /* Neutral Colors */
   --background: #ffffff;
   --background-secondary: #f8f9fa;
-  --background-tertiary: #e8eaed;
-  --foreground: #202124;
-  --foreground-secondary: #5f6368;
-  --foreground-tertiary: #80868b;
+  --background-tertiary: #C1BFC4;
+  /* Original site background */
+  --foreground: #333333;
+  /* Body text */
+  --foreground-secondary: #7C7C7C;
+  /* Secondary text/menu */
+  --foreground-tertiary: #999999;
 
   /* Border Colors */
   --border-color: #dadce0;

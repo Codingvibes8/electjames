@@ -18,14 +18,15 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+              <div className="relative w-12 h-12 flex items-center justify-center">
+                <Image
+                  src="/logo.png"
+                  alt="Electric James Logo"
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
               </div>
-              <span className="text-xl font-bold" style={{ fontFamily: 'var(--font-display)' }}>
-                Electric James
-              </span>
             </div>
             <p className="text-gray-400 mb-4">
               Good honest reliable electrician serving North West London since 2010.
@@ -114,13 +115,22 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
           <p>
-            &copy; {new Date().getFullYear()} Electric James. All rights reserved. | 
-            Fully qualified (18th edition) and Part P certified | 
-            NAPIT Approved Contractor | 
-            Which? Trusted Trader
+            &copy; {new Date().getFullYear()} Electric James. All rights reserved.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/provision-of-services-regulations-information" className="hover:text-white transition-colors">
+              Provision of Services Information
+            </Link>
+          </div>
+          <div className="text-center md:text-right space-y-1">
+             <p>Fully qualified (18th edition) and Part P certified</p>
+             <p>NAPIT Approved Contractor | Which? Trusted Trader</p>
+          </div>
         </div>
       </div>
     </footer>

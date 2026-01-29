@@ -49,9 +49,9 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Hero Content */}
             <div className="fade-in">
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-gray-900" style={{ fontFamily: 'var(--font-poppins)' }}>
-                Expert Electrical Services in{' '}
-                <span className="text-primary">North West London</span>
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-teal-500 via-orange-500 to-yellow-500 text-transparent bg-clip-text" style={{ fontFamily: 'var(--font-poppins)' }}>
+                Expert Electrical Services in 
+                North West London
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Good honest reliable electrician based in Cricklewood, NW2. Fully qualified (18th edition) and Part P certified. 

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Header() {
@@ -22,14 +23,16 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
+            <div className="relative w-12 h-12 flex items-center justify-center">
+              <Image
+                src="/logo.png"
+                alt="Electric James Logo"
+                width={48}
+                height={48}
+                className="object-contain"
+                priority
+              />
             </div>
-            <span className="text-2xl font-bold text-gray-900" style={{ fontFamily: 'var(--font-display)' }}>
-              Electric James
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -53,22 +56,24 @@ export default function Header() {
               
               {/* Dropdown Menu */}
               {servicesDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 py-2 fade-in">
-                  <Link
-                    href="/electrical-services-in-nw2"
-                    className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors font-semibold border-b border-gray-100"
-                  >
-                    All Services
-                  </Link>
-                  {services.map((service) => (
+                <div className="absolute top-full left-0 pt-2 w-72 fade-in">
+                  <div className="bg-white rounded-lg shadow-xl border border-gray-200 py-2">
                     <Link
-                      key={service.href}
-                      href={service.href}
-                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
+                      href="/electrical-services-in-nw2"
+                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors font-semibold border-b border-gray-100"
                     >
-                      {service.name}
+                      All Services
                     </Link>
-                  ))}
+                    {services.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>

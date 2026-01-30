@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { Phone,Cable } from 'lucide-react';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,24 +19,18 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <header className="sticky top-0 z-50 bg-gradient-to-br from-blue-200 via-blue-100 to-blue-50 border-b border-gray-200 shadow-sm">
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative w-12 h-12 flex items-center justify-center">
-              <Image
-                src="/logo.png"
-                alt="Electric James Logo"
-                width={48}
-                height={48}
-                className="object-contain"
-                priority
-              />
-            </div>
+          <Link href="/" className="flex items-center justify-start gap-2">
+           
+              <Cable className='w-8 h-8 ring-2 ring-red-800 rounded-full p-1'/>
+           <span className="font-bold font-serif text-3xl text-red-800">ElectricJamex</span>
+           
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* / Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             <Link href="/" className="text-gray-700 hover:text-primary font-medium transition-colors">
               Home
@@ -92,13 +87,12 @@ export default function Header() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:07825447057" className="text-primary font-semibold hover:text-primary-dark transition-colors">
-              078 2544 7057
+          <div className="hidden lg:flex justify-center items-center gap-2 rounded-md bg-blue-800 p-2">
+            <Phone className='w-6 h-6 text-slate-200 rounded-full p-1 ring-1 ring-slate-300'/>
+            <a href="tel:078 25490 7077" className="text-white font-semibold hover:text-primary-dark transition-colors">
+              078 25490 7077
             </a>
-            <a href="tel:02036623589" className="btn btn-accent">
-              Emergency Call
-            </a>
+           
           </div>
 
           {/* Mobile Menu Button */}
@@ -119,7 +113,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200 fade-in">
+          <div className="lg:hidden border-t bg-blue-400 border-gray-200 fade-in min-h-screen">
             <div className="flex flex-col gap-4">
               <Link href="/" className="text-gray-700 hover:text-primary font-medium transition-colors py-2">
                 Home
@@ -169,13 +163,12 @@ export default function Header() {
                 Contact
               </Link>
 
-              <div className="flex flex-col gap-3 pt-4 border-t border-gray-200">
-                <a href="tel:07825447057" className="btn btn-primary w-full">
-                  Call: 078 2544 7057
+              <div className="flex justify-center items-center gap-2 pt-4 border-t border-gray-200">
+                
+                <a href="tel:078 25490 7077" className="btn btn-primary w-full">
+                  Call: 078 25490 7077
                 </a>
-                <a href="tel:02036623589" className="btn btn-accent w-full">
-                  Emergency: 020 3662 3589
-                </a>
+              
               </div>
             </div>
           </div>

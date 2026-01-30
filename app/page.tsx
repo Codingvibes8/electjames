@@ -49,7 +49,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Hero Content */}
             <div className="fade-in">
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-teal-500 via-orange-500 to-yellow-500 text-transparent bg-clip-text" style={{ fontFamily: 'var(--font-poppins)' }}>
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-gradient" style={{ fontFamily: 'var(--font-poppins)' }}>
                 Expert Electrical Services in 
                 North West London
               </h1>
@@ -81,19 +81,14 @@ export default function Home() {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex items-center">
                 <a href="tel:07825447057" className="btn btn-primary text-lg">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  Call Now: 078 2544 7057
+                  Call Now: tel:078 25490 7077
                 </a>
-                <a href="tel:02036623589" className="btn btn-accent text-lg">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                  Emergency: 020 3662 3589
-                </a>
+              
               </div>
             </div>
 

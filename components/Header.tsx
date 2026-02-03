@@ -19,15 +19,16 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-gradient-to-br from-blue-200 via-blue-100 to-blue-50 border-b border-gray-200 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center justify-start gap-2">
-           
-              <Cable className='w-8 h-8 ring-2 ring-red-800 rounded-full p-1'/>
-           <span className="font-bold font-serif text-3xl text-red-800">ElectricJamex</span>
-           
+          <Link href="/" className="flex items-center justify-start gap-2 group">
+              <div className="relative">
+                <Cable className='w-8 h-8 text-primary group-hover:text-primary-dark transition-colors'/>
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
+              </div>
+            <span className="font-display font-bold text-2xl lg:text-3xl text-slate-800 tracking-tight">Electric<span className="text-primary">James</span></span>
           </Link>
 
           {/* / Navigation */}
@@ -87,12 +88,16 @@ export default function Header() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex justify-center items-center gap-2 rounded-md bg-blue-800 p-2">
-            <Phone className='w-6 h-6 text-slate-200 rounded-full p-1 ring-1 ring-slate-300'/>
-            <a href="tel:078 25490 7077" className="text-white font-semibold hover:text-primary-dark transition-colors">
-              078 25490 7077
+          <div className="hidden lg:flex items-center gap-4">
+            <a href="tel:078254907077" className="group flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full pl-4 pr-6 py-2.5 transition-all shadow-lg shadow-slate-900/20 hover:shadow-slate-900/30 hover:-translate-y-0.5">
+              <div className="bg-white/10 p-1.5 rounded-full group-hover:bg-white/20 transition-colors">
+                <Phone className='w-4 h-4'/>
+              </div>
+              <div className="flex flex-col items-start leading-none">
+                <span className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">24/7 Emergency</span>
+                <span className="font-bold text-lg">078 2549 077</span>
+              </div>
             </a>
-           
           </div>
 
           {/* Mobile Menu Button */}
@@ -113,16 +118,16 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t bg-blue-400 border-gray-200 fade-in min-h-screen">
-            <div className="flex flex-col gap-4">
-              <Link href="/" className="text-gray-700 hover:text-primary font-medium transition-colors py-2">
+          <div className="lg:hidden absolute top-auto left-0 w-full bg-white border-b border-gray-100 shadow-xl fade-in z-40">
+            <div className="flex flex-col p-4 gap-2">
+              <Link href="/" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-primary font-medium transition-colors">
                 Home
               </Link>
               
               {/* Mobile Services */}
-              <div>
+              <div className="rounded-lg overflow-hidden">
                 <button 
-                  className="text-gray-700 hover:text-primary font-medium transition-colors py-2 flex items-center justify-between w-full"
+                  className="w-full px-4 py-3 flex items-center justify-between text-slate-600 hover:bg-slate-50 hover:text-primary font-medium transition-colors"
                   onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                 >
                   Services
@@ -131,18 +136,20 @@ export default function Header() {
                   </svg>
                 </button>
                 {servicesDropdownOpen && (
-                  <div className="pl-4 mt-2 flex flex-col gap-2">
+                  <div className="bg-slate-50 px-4 pb-2">
                     <Link
                       href="/electrical-services-in-nw2"
-                      className="text-gray-600 hover:text-primary transition-colors py-2 font-semibold"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-2 text-sm font-semibold text-primary"
                     >
-                      All Services
+                      View All Services
                     </Link>
                     {services.map((service) => (
                       <Link
                         key={service.href}
                         href={service.href}
-                        className="text-gray-600 hover:text-primary transition-colors py-2"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block py-2 text-sm text-slate-600 hover:text-slate-900"
                       >
                         {service.name}
                       </Link>
@@ -151,24 +158,23 @@ export default function Header() {
                 )}
               </div>
 
-              <Link href="/locations" className="text-gray-700 hover:text-primary font-medium transition-colors py-2">
+              <Link href="/locations" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-primary font-medium transition-colors">
                 Locations
               </Link>
 
-              <Link href="/blog" className="text-gray-700 hover:text-primary font-medium transition-colors py-2">
+              <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-primary font-medium transition-colors">
                 Blog
               </Link>
               
-              <Link href="#contact" className="text-gray-700 hover:text-primary font-medium transition-colors py-2">
+              <Link href="#contact" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-primary font-medium transition-colors">
                 Contact
               </Link>
 
-              <div className="flex justify-center items-center gap-2 pt-4 border-t border-gray-200">
-                
-                <a href="tel:078 25490 7077" className="btn btn-primary w-full">
-                  Call: 078 25490 7077
+              <div className="mt-2 p-4 border-t border-gray-100">
+                <a href="tel:078254907077" className="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-3 rounded-xl shadow-lg shadow-primary/20 active:scale-95 transition-all">
+                  <Phone className="w-5 h-5" />
+                  Call: 078 2549 077
                 </a>
-              
               </div>
             </div>
           </div>

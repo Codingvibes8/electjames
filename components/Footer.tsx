@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Cable } from 'lucide-react';
+import { Cable, Phone, Mail, MapPin, ChevronRight, Facebook, Instagram, Twitter } from 'lucide-react';
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   const services = [
     { name: 'Air Conditioning', href: '/electrical-services-in-nw2/air-conditioning-services' },
     { name: 'EV Charger Installation', href: '/electrical-services-in-nw2/electric-vehicle-installation' },
@@ -12,122 +14,165 @@ export default function Footer() {
     { name: 'Flood Damage Assessment', href: '/electrical-services-in-nw2/flood-damage-electrical-assessment' },
   ];
 
+  const areas = [
+    'Cricklewood (NW2)',
+    'Willesden Green',
+    'Kilburn',
+    'Dollis Hill',
+    'Mapesbury',
+    'Hampstead',
+    'West Hampstead',
+    'North West London',
+  ];
+
   return (
-    <footer className="bg-gradient-to-br from-blue-200 via-blue-100 to-blue-50 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <Link href="/" className="flex items-center justify-start gap-2">
-           
-              <Cable className='w-8 h-8 ring-2 ring-red-800 rounded-full p-1'/>
-           <span className="font-bold font-serif text-2xl text-red-800">ElectricJamex</span>
-           
-          </Link>
-            </div>
-            <p className="text-gray-400 mb-4">
-              Good honest reliable electrician serving North West London since 2010.
+    <footer className="bg-slate-900 text-slate-300 border-t border-slate-800">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          
+          {/* Column 1: Brand & About */}
+          <div className="space-y-6">
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="p-2 bg-slate-800 rounded-lg group-hover:bg-slate-700 transition-colors">
+                 <Cable className='w-8 h-8 text-red-500'/>
+              </div>
+              <span className="font-bold text-2xl text-white tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>
+                Electric<span className="text-red-500">Jamex</span>
+              </span>
+            </Link>
+            
+            <p className="text-slate-400 leading-relaxed">
+              Good honest reliable electrician serving North West London since 2010. 
+              Top-rated for safety, quality, and customer service.
             </p>
-            <div className="flex gap-4 mb-6">
-              <div className="relative w-20 h-20">
-                <Image
-                  src="/images/napit-badge.png"
-                  alt="NAPIT Part P Approved"
-                  fill
-                  className="object-contain"
-                />
+
+            <div className="pt-4">
+              <div className="relative w-24 h-24 bg-white/5 rounded-lg p-2 flex items-center justify-center">
+                 {/* Napit Badge Container - improved visibility */}
+                 <div className="relative w-full h-full">
+                    <Image
+                      src="/images/napit-badge.png"
+                      alt="NAPIT Part P Approved"
+                      fill
+                      className="object-contain"
+                    />
+                 </div>
               </div>
             </div>
           </div>
 
-          {/* Services */}
+          {/* Column 2: Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: 'var(--font-display)' }}>
+            <h3 className="text-white text-lg font-bold mb-6 uppercase tracking-wider relative inline-block">
               Our Services
+              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-red-500 rounded-full"></span>
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.href}>
-                  <Link href={service.href} className="text-gray-400 hover:text-white transition-colors">
-                    {service.name}
+                  <Link 
+                    href={service.href} 
+                    className="flex items-center group hover:text-white transition-colors duration-300"
+                  >
+                    <ChevronRight className="w-4 h-4 text-red-500 mr-2 opacity-0 group-hover:opacity-100 transition-all transform -translate-x-2 group-hover:translate-x-0" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">{service.name}</span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Service Areas */}
+          {/* Column 3: Service Areas */}
           <div>
-            <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: 'var(--font-display)' }}>
+            <h3 className="text-white text-lg font-bold mb-6 uppercase tracking-wider relative inline-block">
               Service Areas
+              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-red-500 rounded-full"></span>
             </h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>Cricklewood (NW2)</li>
-              <li>Willesden Green</li>
-              <li>Kilburn</li>
-              <li>Dollis Hill</li>
-              <li>Mapesbury</li>
-              <li>Hampstead</li>
-              <li>West Hampstead</li>
-              <li>North West London</li>
-            </ul>
+            <div className="grid grid-cols-1 gap-2">
+              {areas.map((area) => (
+                <div key={area} className="flex items-center gap-2 text-slate-400">
+                  <MapPin className="w-4 h-4 text-slate-600 shrink-0" />
+                  <span>{area}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Contact */}
+          {/* Column 4: Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: 'var(--font-display)' }}>
-              Contact Us
+             <h3 className="text-white text-lg font-bold mb-6 uppercase tracking-wider relative inline-block">
+              Get in Touch
+              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-red-500 rounded-full"></span>
             </h3>
-            <ul className="space-y-3 text-gray-400">
-              <li className="flex items-start gap-2">
-                <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <div>
-                  <a href="tel:078 25490 7077" className="hover:text-white transition-colors block">
-              078 25490 7077
-                  </a>
-                  <a href="tel:02036623589" className="hover:text-white transition-colors block">
-                    call: 020 9862 7865
-                  </a>
+            <ul className="space-y-6">
+              <li>
+                <div className="flex items-start gap-4 group">
+                  <div className="p-3 bg-red-500/10 rounded-full group-hover:bg-red-500 transition-colors duration-300">
+                    <Phone className="w-5 h-5 text-red-500 group-hover:text-white transition-colors" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-1">Mobile</p>
+                    <a href="tel:07825490707" className="text-lg text-white font-bold hover:text-red-400 transition-colors block">
+                      078 2549 0707
+                    </a>
+                  </div>
                 </div>
               </li>
-              <li className="flex items-start gap-2">
-                <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <a href="mailto:hello@electricjamex.com" className="hover:text-white transition-colors">
-                  hello@electricjamex.com
-                </a>
+              
+              <li>
+                <div className="flex items-start gap-4 group">
+                   <div className="p-3 bg-slate-800 rounded-full group-hover:bg-slate-700 transition-colors">
+                    <Phone className="w-5 h-5 text-slate-400" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-1">Office</p>
+                    <a href="tel:02098627865" className="text-base text-slate-300 hover:text-white transition-colors block">
+                      020 9862 7865
+                    </a>
+                  </div>
+                </div>
               </li>
-              <li className="flex items-start gap-2">
-                <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span>Cricklewood, London NW2</span>
+
+              <li>
+                <div className="flex items-start gap-4 group">
+                  <div className="p-3 bg-slate-800 rounded-full group-hover:bg-slate-700 transition-colors">
+                    <Mail className="w-5 h-5 text-slate-400" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-1">Email Us</p>
+                    <a href="mailto:hello@electricjamex.com" className="text-base text-slate-300 hover:text-white transition-colors">
+                      hello@electricjamex.com
+                    </a>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
-          <p>
-            &copy; {new Date().getFullYear()} Electric Jamex. All rights reserved.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-            <Link href="/privacy-policy" className="hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/provision-of-services-regulations-information" className="hover:text-white transition-colors">
-              Provision of Services Information
-            </Link>
-          </div>
-          <div className="text-center md:text-right space-y-1">
-             <p>Fully qualified (18th edition) and Part P certified</p>
-             <p>NAPIT Approved Contractor | Which? Trusted Trader</p>
+      {/* Bottom Legal Bar */}
+      <div className="bg-slate-950 border-t border-slate-900">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+            <div className="text-center md:text-left">
+              <p>&copy; {currentYear} Electric Jamex. All rights reserved.</p>
+              <div className="mt-1 flex gap-2 justify-center md:justify-start">
+                 <span>Fully qualified (18th edition)</span>
+                 <span>&bull;</span>
+                 <span>Part P certified</span>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-6">
+               <Link href="/privacy-policy" className="hover:text-slate-300 transition-colors">
+                  Privacy Policy
+               </Link>
+               <Link href="/provision-of-services-regulations-information" className="hover:text-slate-300 transition-colors">
+                  Terms of Service
+               </Link>
+            </div>
           </div>
         </div>
       </div>

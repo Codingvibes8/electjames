@@ -200,7 +200,7 @@ export default function Hero() {
               style={{ x: moveX, y: moveY }}
             >
               <Image
-                src="/images/hero_electrician_1769615393352.png"
+                src="/electric1.jpg"
                 alt="Professional electrician working on electrical panel"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
@@ -213,7 +213,7 @@ export default function Hero() {
 
             {/* Floating Badge 1 */}
             <motion.div
-              className="absolute -left-8 top-1/4 bg-white p-4 rounded-2xl shadow-xl z-20 max-w-[180px]"
+              className="absolute -left-8 top-1/4 bg-yellow-500 p-4 rounded-2xl shadow-xl z-20 max-w-[180px]"
               animate={{ y: [0, 20, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             >
@@ -226,13 +226,13 @@ export default function Hero() {
             
             {/* Floating Badge 2 */}
             <motion.div
-              className="absolute -right-8 bottom-1/4 bg-slate-900 text-white p-6 rounded-2xl shadow-2xl z-20 border border-slate-700"
+              className="absolute -right-8 bottom-1/4 bg-blue-800 text-white p-6 rounded-2xl shadow-2xl z-20 border border-slate-700"
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
             >
               <div className="text-center">
-                <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-white to-slate-400">15+</p>
-                <p className="text-xs uppercase tracking-widest text-slate-400 mt-1 font-semibold">Years Exp.</p>
+                <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-white to-slate-200">15+</p>
+                <p className="text-xs uppercase tracking-widest text-slate-100 mt-1 font-semibold">Years Exp.</p>
               </div>
             </motion.div>
           </motion.div>

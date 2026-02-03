@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import ServiceCard from '@/components/ServiceCard';
+import Hero from '@/components/Hero';
 
 export default function Home() {
   const services = [
@@ -43,68 +44,7 @@ export default function Home() {
 
   return (
     <main>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-white py-20 lg:py-32 overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Hero Content */}
-            <div className="fade-in">
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-gradient" style={{ fontFamily: 'var(--font-poppins)' }}>
-                Expert Electrical Services in 
-                North West London
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Good honest reliable electrician based in Cricklewood, NW2. Fully qualified (18th edition) and Part P certified. 
-                Trusted by homeowners and businesses across North West London.
-              </p>
-              
-              {/* Trust Badges */}
-              <div className="flex flex-wrap items-center gap-6 mb-8">
-                <div className="flex items-center gap-2 text-gray-700">
-                  <svg className="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="font-semibold">NAPIT Approved</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-700">
-                  <svg className="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="font-semibold">Which? Trusted Trader</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-700">
-                  <svg className="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="font-semibold">Part P Certified</span>
-                </div>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex items-center">
-                <a href="tel:07825447057" className="btn btn-primary text-lg">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  Call Now: tel:078 25490 7077
-                </a>
-              
-              </div>
-            </div>
-
-            {/* Hero Image */}
-            <div className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl slide-in-right">
-              <Image
-                src="/images/hero_electrician_1769615393352.png"
-                alt="Professional electrician working on electrical panel"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* Services Section */}
       <section className="section-lg bg-white">

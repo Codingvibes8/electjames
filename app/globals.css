@@ -153,9 +153,21 @@ p {
 /* Utility Classes */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 var(--spacing-md);
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 4rem;
+  }
 }
 
 .section {
@@ -232,6 +244,30 @@ p {
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
   border-color: var(--color-primary-light);
+}
+
+/* Hero Section Styles */
+.hero-gradient-text {
+  background: linear-gradient(90deg, #C18BFC, #FF006E, #00D4FF, #FFD700, #C18BFC);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: hero-gradient-shift 4s ease infinite;
+}
+
+@keyframes hero-gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero-border-glow {
+  animation: hero-border-pulse 3s ease-in-out infinite;
+}
+
+@keyframes hero-border-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
 }
 
 /* Animations */

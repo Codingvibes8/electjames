@@ -261,6 +261,378 @@ const blogPosts: Record<string, BlogPost> = {
       </>
     ),
   },
+  'ev-charging-installation': {
+    title: 'Complete Guide to EV Charging Installation at Home',
+    description: 'Everything homeowners need to know about installing an electric vehicle charger. Costs, installation process, grants available, and choosing the right charger for your home.',
+    date: 'February 5, 2026',
+    category: 'EV & Energy',
+    content: (
+      <>
+        <p className="mb-6 leading-relaxed">
+          As more of us make the switch to electric vehicles, home charging has become essential. Rather than relying solely on public charging networks, installing a charger at home offers convenience, cost savings, and is often faster than public chargers. In this guide, we cover everything you need to know about residential EV charger installation.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">Why Install a Home EV Charger?</h2>
+        <p className="mb-6 leading-relaxed">
+          There are several compelling reasons to invest in a home charger:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-600">
+          <li><strong>Convenience:</strong> Charge overnight while you sleep. Your car is ready every morning.</li>
+          <li><strong>Cost Savings:</strong> Charging at home is significantly cheaper than public fast chargers, especially if you charge during off-peak hours.</li>
+          <li><strong>Faster Charging:</strong> Home chargers can fully charge most EVs in 4-8 hours, much faster than a standard 3-pin socket.</li>
+          <li><strong>Property Value:</strong> Properties with EV chargers are increasingly desirable to buyers.</li>
+          <li><strong>Reliability:</strong> Not dependent on public charger availability or maintenance.</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">Types of EV Chargers</h2>
+        <div className="space-y-4 mb-8">
+          <div className="bg-blue-50 p-6 rounded-lg border border-blue-100">
+            <h3 className="font-bold text-gray-900 mb-2">Slow Chargers (3kW)</h3>
+            <p className="text-gray-600">Uses a standard 3-pin socket or dedicated 3kW supply. Charges full battery in 24-48 hours. Cheapest option, no installation needed, but slowest.</p>
+          </div>
+          <div className="bg-blue-50 p-6 rounded-lg border border-blue-100">
+            <h3 className="font-bold text-gray-900 mb-2">Fast Chargers (7-22kW)</h3>
+            <p className="text-gray-600">Most popular for home use. Requires dedicated circuit. Fully charges most EVs in 4-8 hours. This is what we typically install at UK homes.</p>
+          </div>
+          <div className="bg-blue-50 p-6 rounded-lg border border-blue-100">
+            <h3 className="font-bold text-gray-900 mb-2">Rapid Chargers (>22kW)</h3>
+            <p className="text-gray-600">Requires three-phase supply. Charges battery to 80% in 20-30 minutes. More suited to public charging networks or commercial use.</p>
+          </div>
+        </div>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">Is Your Home Ready for an EV Charger?</h2>
+        <p className="mb-4 leading-relaxed">
+          Before booking installation, check the following:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-600">
+          <li><strong>Off-Street Parking:</strong> You need a dedicated parking space with direct access. Chargers can't be strung across pavements.</li>
+          <li><strong>Electrical Supply:</strong> Your home needs adequate electrical capacity. A 7-22kW charger requires a dedicated circuit.</li>
+          <li><strong>Distance:</strong> Typical installation range is 5-15 meters from the fuse box. Longer distances may require upgrading your supply.</li>
+          <li><strong>Planning Permission:</strong> Usually not needed for wall-mounted chargers on residential properties, but always worth checking with your local council.</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">Installation Process</h2>
+        <p className="mb-6 leading-relaxed">
+          A professional installation typically takes 1-2 days:
+        </p>
+        <div className="space-y-4 mb-8">
+          <div className="flex gap-4">
+            <span className="text-primary font-bold text-lg">1.</span>
+            <div>
+              <h4 className="font-bold text-gray-900 mb-1">Electrical Inspection</h4>
+              <p className="text-gray-600">We assess your current electrical system to ensure it can safely handle the charger demand.</p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <span className="text-primary font-bold text-lg">2.</span>
+            <div>
+              <h4 className="font-bold text-gray-900 mb-1">Circuit Installation</h4>
+              <p className="text-gray-600">If needed, we run a dedicated 32A or 63A circuit from your consumer unit to the charger location.</p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <span className="text-primary font-bold text-lg">3.</span>
+            <div>
+              <h4 className="font-bold text-gray-900 mb-1">Charger Installation</h4>
+              <p className="text-gray-600">We secure the charger to the wall or pedestal mount and connect it to the circuit.</p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <span className="text-primary font-bold text-lg">4.</span>
+            <div>
+              <h4 className="font-bold text-gray-900 mb-1">Testing & Certification</h4>
+              <p className="text-gray-600">The installation is tested and certified to Building Regulations. You'll receive an electrical safety certificate.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">Costs & Grants</h2>
+        <p className="mb-4 leading-relaxed">
+          <strong>Installation Costs:</strong> £1,000 - £3,500 depending on the charger model and installation complexity. Fast chargers for new cars are typically around £1,500-£2,500 including installation.
+        </p>
+        <p className="mb-6 leading-relaxed">
+          <strong>Government Grants:</strong> The Electric Vehicle Homecharge Scheme (EVHS) allows eligible homeowners to claim up to £350 toward the cost of a smart charger installation, even if you already have a charger. Check the low-carbon scheme to see if you qualify.
+        </p>
+        <p className="mb-6 leading-relaxed">
+          <strong>Running Costs:</strong> An EV typically costs around 14-20p per mile to charge at home on standard rate, compared to 30-40p per mile for a petrol car. Charging during off-peak hours (Economy 7) can reduce this further.
+        </p>
+
+        <div className="bg-green-50 p-8 rounded-2xl border border-green-100 my-10 relative overflow-hidden">
+          <div className="relative z-10">
+            <h3 className="text-xl font-bold mb-2 text-gray-900">Ready to Go Electric?</h3>
+            <p className="mb-6 text-gray-700">Electric James specializes in EV charger installation across North West London. We'll handle the inspection, installation, testing, and all Building Regulations compliance.</p>
+            <div className="flex gap-4 flex-wrap">
+              <Link href="/#contact" className="btn btn-primary shadow-lg">Book a Site Survey</Link>
+              <Link href="tel:07825447057" className="btn btn-outline border-green-600 text-green-600 hover:bg-green-600 hover:text-white">Call for Quote</Link>
+            </div>
+          </div>
+        </div>
+      </>
+    ),
+  },
+  'common-electrical-problems': {
+    title: '7 Common Electrical Problems and How to Fix Them',
+    description: 'Discover the most common electrical issues found in homes, what causes them, and whether you can safely fix them yourself or need to call a professional electrician.',
+    date: 'February 3, 2026',
+    category: 'Home Safety',
+    content: (
+      <>
+        <p className="mb-6 leading-relaxed">
+          Electrical problems are one of the most common issues homeowners face, and they can range from minor annoyances to serious fire hazards. Some you can fix yourself, but many require a qualified electrician. Let's walk through seven of the most common electrical problems we encounter at Electric James, what causes them, and what you should do about them.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">1. Lights Flickering or Dimming</h2>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">What's Happening?</h3>
+        <p className="mb-4 text-gray-600">
+          When lights flicker or dim unexpectedly, it usually means there's a fluctuation in voltage, often when you turn on a high-power appliance like a kettle, washing machine, or electric heater.
+        </p>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">DIY or Professional?</h3>
+        <p className="mb-6 text-gray-600">
+          <strong>Professional.</strong> Occasional dimming is normal, but persistent flickering suggests either a loose connection in your circuit or an overloaded circuit. Loose connections are a fire risk and need a qualified electrician to investigate.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">2. Dead or Weak Outlets</h2>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">What's Happening?</h3>
+        <p className="mb-4 text-gray-600">
+          A socket that doesn't work or doesn't hold plugs firmly is usually due to worn-out contacts inside the outlet or a tripped RCD.
+        </p>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">DIY or Professional?</h3>
+        <p className="mb-6 text-gray-600">
+          <strong>For the Brave:</strong> First, check if an RCD has tripped by pressing the test button on your consumer unit. If the socket still doesn't work after resetting, it needs replacing. Replacing an outlet is relatively straightforward if you're confident turning off power at the fuse box and using a screwdriver. If not, <strong>call a professional.</strong> Loose connections over time generate heat and can cause fires.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">3. Circuit Breaker Keeps Tripping</h2>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">What's Happening?</h3>
+        <p className="mb-4 text-gray-600">
+          Your breaker (or RCD) is doing its job—protecting you from electrical faults. It trips when too much current flows through a circuit or when it detects a fault.
+        </p>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">DIY or Professional?</h3>
+        <p className="mb-6 text-gray-600">
+          <strong>DIY First:</strong> Try removing some devices from that circuit. If it stops tripping, you've simply overloaded it. Use fewer appliances simultaneously. However, if <strong>it keeps tripping even with nothing plugged in</strong>, there's a fault in the wiring. <strong>Call an electrician immediately.</strong> This is a serious issue.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">4. Burning Smell Near Outlets or Switches</h2>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">What's Happening?</h3>
+        <p className="mb-4 text-gray-600">
+          A burning plastic smell is a sign of arcing—tiny electrical fires inside the outlet—or overheating wiring. This is a serious fire hazard.
+        </p>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">DIY or Professional?</h3>
+        <p className="mb-6 text-gray-600">
+          <strong>STOP! Turn off power immediately.</strong> Don't touch the outlet. Call an electrician right away. A burning smell means the insulation is breaking down inside the outlet or wall. This won't fix itself and requires immediate attention.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">5. Light Switch Doesn't Work</h2>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">What's Happening?</h3>
+        <p className="mb-4 text-gray-600">
+          Could be a burned-out bulb, a failed switch, or a wiring issue further back. It depends on whether it's just one light or a whole circuit.
+        </p>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">DIY or Professional?</h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-600">
+          <li><strong>Just the bulb?</strong> Try replacing it. Make sure it's the correct wattage.</li>
+          <li><strong>Multiple lights on that circuit?</strong> Likely a tripped RCD. Check your consumer unit.</li>
+          <li><strong>Just that switch?</strong> The switch itself probably needs replacing. <strong>Call a professional to do this safely.</strong></li>
+        </ul>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">6. Not Enough Outlets</h2>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">What's Happening?</h3>
+        <p className="mb-4 text-gray-600">
+          Modern homes have more electrical demands than older properties. You're relying on extension leads because there aren't enough outlets.
+        </p>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">DIY or Professional?</h3>
+        <p className="mb-6 text-gray-600">
+          <strong>Professional only.</strong> While it might be tempting to buy more extension leads, constantly using them is a fire risk. The proper solution is to have a qualified electrician install additional outlets where you need them. This might be a quick 30-minute job or part of a larger rewire, depending on your home's layout and age.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">7. High Electricity Bills</h2>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">What's Happening?</h3>
+        <p className="mb-4 text-gray-600">
+          Your bill might be high due to inefficient appliances, but electrical faults (especially arcing or poor earthing) can also waste energy.
+        </p>
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">DIY or Professional?</h3>
+        <p className="mb-6 text-gray-600">
+          <strong>Check first:</strong> Look at your usage patterns and appliances. Modern items are usually efficient, but old heaters and large appliances consume power. If you suspect a fault, get an <strong>EICR (Electrical Installation Condition Report)</strong> to identify any problems in your wiring that might be causing energy loss.
+        </p>
+
+        <div className="bg-yellow-50 p-8 rounded-2xl border border-yellow-100 my-10 relative overflow-hidden">
+          <div className="relative z-10">
+            <h3 className="text-xl font-bold mb-2 text-gray-900">When in Doubt, Call a Professional</h3>
+            <p className="mb-6 text-gray-700">Electricity is dangerous. While some fixes are straightforward, most electrical problems require a qualified electrician. A DIY mistake can be fatal. Electric James offers fast diagnosis and repair of electrical faults across NW2 and North West London.</p>
+            <Link href="/#contact" className="btn btn-primary inline-block shadow-lg">
+              Book a Diagnostic Visit
+            </Link>
+          </div>
+        </div>
+      </>
+    ),
+  },
+  'pat-testing-guide': {
+    title: 'What Every Business Owner Needs to Know About PAT Testing',
+    description: 'PAT testing is a legal requirement for businesses. Learn what it is, why it matters, how often you need it, and what to expect during the testing process.',
+    date: 'January 20, 2026',
+    category: 'Business',
+    content: (
+      <>
+        <p className="mb-6 leading-relaxed">
+          If you own or manage a business with electrical equipment, you've likely heard the term "PAT testing." It's become an acronym floating around health and safety discussions, but not all businesses understand why it's important or what it actually involves. This guide covers everything business owners need to know about PAT testing.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">What is PAT Testing?</h2>
+        <p className="mb-6 leading-relaxed">
+          PAT stands for <strong>Portable Appliance Testing</strong>. It's a procedure involving both visual inspection and electrical testing of portable electrical appliances and equipment to ensure they are safe to use. "Portable" here means anything that isn't fixed to the building—computers, printers, microwaves, fans, power tools, chargers, office equipment, etc.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">Is PAT Testing a Legal Requirement?</h2>
+        <p className="mb-6 leading-relaxed">
+          <strong>Yes and no.</strong> PAT testing is not explicitly mandated by a single law, but it is a requirement under multiple regulations including:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-600">
+          <li><strong>Health and Safety at Work Act 1974:</strong> Requires employers to ensure the health and safety of employees and visitors.</li>
+          <li><strong>Electricity at Work Regulations 1989:</strong> Requires electrical equipment to be maintained in a safe condition.</li>
+          <li><strong>Management of Health and Safety at Work Regulations 1999:</strong> Requires risk assessments of workplace hazards, including electrical safety.</li>
+        </ul>
+        <p className="mb-6 leading-relaxed">
+          PAT testing is the standard method businesses use to demonstrate compliance with these regulations. If an employee is injured by faulty equipment and it's discovered you haven't been testing appliances, your liability is significant.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">Who Needs PAT Testing?</h2>
+        <p className="mb-6 leading-relaxed">
+          Most businesses need PAT testing, including:
+        </p>
+        <div className="grid gap-4 md:grid-cols-2 mb-8">
+          <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
+            <h4 className="font-bold text-gray-900 mb-2">Typically Required</h4>
+            <ul className="text-sm text-gray-600 space-y-1">
+              <li>• Offices</li>
+              <li>• Shops</li>
+              <li>• Restaurants & Cafés</li>
+              <li>• Gyms & Leisure Facilities</li>
+              <li>• Workshops & Garages</li>
+            </ul>
+          </div>
+          <div className="bg-green-50 p-4 rounded-lg border border-green-100">
+            <h4 className="font-bold text-gray-900 mb-2">Special Consideration</h4>
+            <ul className="text-sm text-gray-600 space-y-1">
+              <li>• Building Sites</li>
+              <li>• Industrial Facilities</li>
+              <li>• Schools & Universities</li>
+              <li>• Hospitals</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">How Often Do You Need PAT Testing?</h2>
+        <p className="mb-6 leading-relaxed">
+          There's no single prescribed frequency—it depends on the type of business, the equipment, and how heavily it's used. However, general guidelines are:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-600">
+          <li><strong>Office Environments:</strong> Annually (or every 2 years if the equipment is low-risk).</li>
+          <li><strong>Workshops & Industrial:</strong> Every 6-12 months. More frequent if equipment receives heavy use.</li>
+          <li><strong>Construction Sites:</strong> Every 3 months due to harsh conditions and equipment stress.</li>
+          <li><strong>Hotels & Hospitality:</strong> Annually, especially for high-guest-turnover kitchens and laundries.</li>
+        </ul>
+        <p className="mb-6 leading-relaxed">
+          The key is maintaining a <strong>risk-based approach</strong>. A professional PAT testing company can assess your specific situation and recommend a testing schedule.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">What Happens During a PAT Test?</h2>
+        <p className="mb-6 leading-relaxed">
+          A PAT test involves two main activities:
+        </p>
+
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">Visual Inspection</h3>
+        <p className="mb-6 text-gray-600">
+          The tester examines the equipment for obvious damage, wear, or hazards:
+          <br /><br />
+          • Is the cable intact with no cuts or splits?
+          <br />
+          • Are the pins on the plug damaged?
+          <br />
+          • Is the equipment clean and free from damage?
+          <br />
+          • Are there any burn marks or discoloration?
+          <br />
+          <br />
+          If visual inspection fails, the tester will stop and label the item as "Failed" without proceeding to electrical testing.
+        </p>
+
+        <h3 className="text-lg font-semibold text-gray-800 mb-3">Electrical Testing</h3>
+        <p className="mb-6 text-gray-600">
+          Using a portable appliance tester (a specialized meter), the tester checks:
+          <br /><br />
+          • <strong>Continuity:</strong> Earth protection is working correctly.
+          <br />
+          • <strong>Insulation:</strong> Electrical insulation meets safety standards.
+          <br />
+          • <strong>Leakage Current:</strong> No dangerous current is escaping from the equipment.
+          <br />
+          <br />
+          Each appliance is labeled with a sticker showing the test date and next due date. Items that fail are removed from service immediately.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">What Gets Tested?</h2>
+        <p className="mb-4 leading-relaxed">
+          Anything that's plugged in or battery-powered qualifies:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-600">
+          <li>Computers, monitors, and peripherals</li>
+          <li>Printers and copiers</li>
+          <li>Coffee machines and kettles</li>
+          <li>Fans and heaters</li>
+          <li>Extension leads and power strips</li>
+          <li>Power tools</li>
+          <li>Chargers for phones and devices</li>
+          <li>Microwave ovens</li>
+          <li>Washing machines and dryers</li>
+        </ul>
+        <p className="mb-6 leading-relaxed">
+          <strong>Note:</strong> Fixed appliances (built into the building) are covered by different regulations and don't need PAT testing. However, the fixed wiring itself needs regular inspection via an EICR.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">The Cost of PAT Testing</h2>
+        <p className="mb-6 leading-relaxed">
+          PAT testing is relatively inexpensive compared to the liability of an accident. Typical costs are:
+          <br /><br />
+          <strong>• Individual appliance:</strong> £1-3 per item
+          <br />
+          <strong>• Small office (20-30 items):</strong> £50-100
+          <br />
+          <strong>• Medium business (100+ items):</strong> £150-300
+          <br />
+          <strong>• Large industrial site:</strong> Custom quote
+          <br />
+          <br />
+          Many testing companies offer annual maintenance contracts at discounted rates.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">What Happens if You Don't Do PAT Testing?</h2>
+        <p className="mb-6 leading-relaxed">
+          The risks include:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-600">
+          <li><strong>Legal Liability:</strong> If someone is injured, the HSE can prosecute. Fines have reached £20,000+ for serious breaches.</li>
+          <li><strong>Insurance Issues:</strong> Many business insurance policies exclude claims if you haven't maintained electrical safety standards.</li>
+          <li><strong>Reputation Damage:</strong> Being prosecuted for health and safety violations damages your business reputation.</li>
+          <li><strong>Human Cost:</strong> Electrical hazards can cause serious injury or death.</li>
+        </ul>
+
+        <div className="bg-slate-900 text-white p-8 rounded-2xl my-10 relative overflow-hidden">
+          <div className="relative z-10">
+            <h3 className="text-xl font-bold mb-2">Professional PAT Testing for Your Business</h3>
+            <p className="mb-6 opacity-90">Electric James provides comprehensive PAT testing services across London and North West London. We test your equipment, label it, and provide documentation for compliance. We can also help you establish a testing schedule tailored to your business type.</p>
+            <Link href="/#contact" className="btn btn-accent inline-block">
+              Get a Free Quote
+            </Link>
+          </div>
+          <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-blue-400 rounded-full opacity-20 blur-3xl"></div>
+        </div>
+
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">Final Thoughts</h2>
+        <p className="mb-6 leading-relaxed">
+          PAT testing is a straightforward, affordable way to protect your employees, customers, and your business from electrical hazards. It's not just about compliance—it's about ensuring everyone who enters your workplace is safe. If you haven't had your appliances tested recently, now is the time to do it.
+        </p>
+      </>
+    ),
+  },
 };
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {

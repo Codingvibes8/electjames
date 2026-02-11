@@ -48,7 +48,7 @@ export default function Home() {
 
       {/* Services Section */}
       <section className="section-lg bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold mb-4 text-gray-900" style={{ fontFamily: 'var(--font-poppins)' }}>
               Our Electrical Services
@@ -69,7 +69,7 @@ export default function Home() {
 
       {/* Service Areas Section */}
       <section className="section-lg bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-900" style={{ fontFamily: 'var(--font-poppins)' }}>
               Serving North West London
@@ -81,12 +81,12 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {['Cricklewood', 'Willesden Green', 'Kilburn', 'Dollis Hill', 'Mapesbury', 'Hampstead', 'West Hampstead', 'NW2 Area'].map((area) => (
-              <div key={area} className="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow">
-                <svg className="w-6 h-6 text-primary mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div key={area} className="group bg-white rounded-xl p-5 text-center shadow-sm border border-transparent transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-[#C18BFC]/20 hover:bg-linear-to-b hover:from-white hover:to-[#F3E8FF]/30">
+                <svg className="w-7 h-7 text-[#BC3931] mx-auto mb-2 transition-all duration-300 group-hover:scale-110 group-hover:text-[#C18BFC] group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <p className="font-medium text-gray-900">{area}</p>
+                <p className="font-semibold text-gray-900 group-hover:text-[#BC3931] transition-colors duration-300">{area}</p>
               </div>
             ))}
           </div>
@@ -95,7 +95,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section id="contact" className="section-lg bg-gradient-to-br from-primary to-primary-dark text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto text-center">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6" style={{ fontFamily: 'var(--font-poppins)' }}>
             Need an Electrician?
           </h2>

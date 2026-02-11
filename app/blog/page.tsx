@@ -30,6 +30,27 @@ export default function BlogPage() {
       date: 'December 10, 2025',
       slug: 'signs-you-need-rewire',
     },
+    {
+      id: 4,
+      title: 'Complete Guide to EV Charging Installation at Home',
+      excerpt: 'Everything homeowners need to know about installing an electric vehicle charger. Costs, installation process, grants, and choosing the right charger for your needs.',
+      date: 'February 5, 2026',
+      slug: 'ev-charging-installation',
+    },
+    {
+      id: 5,
+      title: '7 Common Electrical Problems and How to Fix Them',
+      excerpt: 'Discover the most common electrical issues in homes, what causes them, and whether you can fix them yourself or need a professional electrician.',
+      date: 'February 3, 2026',
+      slug: 'common-electrical-problems',
+    },
+    {
+      id: 6,
+      title: 'What Every Business Owner Needs to Know About PAT Testing',
+      excerpt: 'PAT testing is a legal requirement for businesses. Learn what it is, why it matters, how often you need it, and what to expect during the process.',
+      date: 'January 20, 2026',
+      slug: 'pat-testing-guide',
+    },
   ];
 
   return (

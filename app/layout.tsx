@@ -34,9 +34,11 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} antialiased`}
         style={{ fontFamily: 'var(--font-inter)' }}
       >
-        <Header />
-        {children}
-        <Footer />
+        <div className="max-w-[1536px] mx-auto">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

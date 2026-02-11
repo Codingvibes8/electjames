@@ -28,7 +28,7 @@ const pathName = usePathname();
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
-      <nav className="container mx-auto px-4">
+      <nav className="container mx-auto">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center justify-start gap-2 group">

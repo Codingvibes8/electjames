@@ -64,7 +64,7 @@ export default function ContactForm() {
           </p>
           <button
             onClick={() => setIsSuccess(false)}
-            className="mt-4 text-orange-500 hover:text-orange-400 font-medium transition-colors"
+            className="mt-4 text-[#C18BFC] hover:text-[#A96EE8] font-medium transition-colors"
           >
             Send another message
           </button>
@@ -83,7 +83,7 @@ export default function ContactForm() {
                 placeholder="John Doe"
                 className={`w-full bg-white/5 border ${
                   errors.name ? "border-red-500" : "border-white/10"
-                } rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 transition-all`}
+                } rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C18BFC]/50 transition-all`}
               />
               {errors.name && (
                 <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>
@@ -101,7 +101,7 @@ export default function ContactForm() {
                 placeholder="john@example.com"
                 className={`w-full bg-white/5 border ${
                   errors.email ? "border-red-500" : "border-white/10"
-                } rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 transition-all`}
+                } rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C18BFC]/50 transition-all`}
               />
               {errors.email && (
                 <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
@@ -118,7 +118,7 @@ export default function ContactForm() {
               type="tel"
               id="phone"
               placeholder="+44 123 456 7890"
-              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 transition-all"
+              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C18BFC]/50 transition-all"
             />
           </div>
 
@@ -133,7 +133,7 @@ export default function ContactForm() {
               placeholder="How can we help you?"
               className={`w-full bg-white/5 border ${
                 errors.message ? "border-red-500" : "border-white/10"
-              } rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 transition-all resize-none`}
+              } rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C18BFC]/50 transition-all resize-none`}
             />
             {errors.message && (
               <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>
@@ -143,7 +143,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-orange-600 hover:bg-orange-500 disabled:bg-orange-600/50 text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-all transform active:scale-[0.98]"
+            className="w-full bg-[#BC3931] hover:bg-[#9A2D27] disabled:bg-[#BC3931]/50 text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-all transform active:scale-[0.98]"
           >
             {isSubmitting ? (
               <>

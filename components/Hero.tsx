@@ -1,9 +1,14 @@
 
 "use client";
 
-import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
+
+
+
+import { motion, useTransform, useSpring, useMotionValue } from 'framer-motion';
 import Image from 'next/image';
-import { useRef, useEffect } from 'react';
+import { useRef} from 'react';
+import { Badge, Phone } from 'lucide-react';
+
 
 export default function Hero() {
   const ref = useRef(null);
@@ -32,10 +37,10 @@ export default function Hero() {
   const particleCount = 25;
   const particles = Array.from({ length: particleCount }).map((_, i) => ({
     id: i,
-    size: Math.random() * 8 + 2, // 2-10px
+    size: Math.random() * 20 + 2, // 2-10px
     x: Math.random() * 100, // 0-100%
     y: Math.random() * 100, // 0-100%
-    duration: Math.random() * 20 + 10, // 10-30s
+    duration: Math.random() * 10 + 10, // 10-30s
     delay: Math.random() * 5,
     opacity: Math.random() * 0.3 + 0.1, // 0.1-0.4
   }));
@@ -44,27 +49,27 @@ export default function Hero() {
     <section 
       ref={ref}
       onMouseMove={handleMouseMove}
-      className="relative min-h-[90vh] flex items-center bg-white overflow-hidden py-40 lg:py-32"
+      className="relative min-h-[90vh] flex items-center bg-white overflow-hidden"
     >
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-30"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-80"></div>
       </div>
 
       <motion.div 
         style={{ x: moveXReverse, y: moveYReverse }}
-        className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-50/50 rounded-full blur-3xl opacity-30 pointer-events-none mix-blend-multiply"
+        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#C18BFC]/20 rounded-full blur-3xl opacity-30 pointer-events-none mix-blend-multiply"
       />
       <motion.div 
         style={{ x: moveX, y: moveY }}
-        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-red-50/50 rounded-full blur-3xl opacity-30 pointer-events-none mix-blend-multiply"
+        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#BC3931]/10 rounded-full blur-3xl opacity-30 pointer-events-none mix-blend-multiply"
       />
 
       {/* Floating Particles - Made Subtle */}
       {particles.map((p) => (
         <motion.div
           key={p.id}
-          className="absolute bg-blue-400 rounded-full pointer-events-none"
+          className="absolute bg-[#C18BFC] rounded-full pointer-events-none"
           style={{
             left: `${p.x}%`,
             top: `${p.y}%`,
@@ -88,7 +93,7 @@ export default function Hero() {
         />
       ))}
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 md:px-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
           {/* Content */}
@@ -98,7 +103,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <motion.h1 
-              className="text-4xl lg:text-7xl font-bold mb-6 text-gradient tracking-tight"
+              className="text-4xl lg:text-5xl font-bold mb-6 text-gradient tracking-tight"
               style={{ fontFamily: 'var(--font-poppins)' }}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -107,7 +112,7 @@ export default function Hero() {
               Expert Electrical Services in 
               <br />
               <motion.span 
-                className="text-primary inline-block"
+                className="text-gradient inline-block"
                 animate={{ rotate: [0, 1, 0, -1, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               >
@@ -136,7 +141,7 @@ export default function Hero() {
                 "NAPIT Approved", 
                 "Which? Trusted Trader", 
                 "Part P Certified"
-              ].map((badge, i) => (
+              ].map((badge) => (
                 <motion.div 
                   key={badge}
                   className="flex items-center gap-2 text-slate-700 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm hover:border-primary/20 transition-colors"
@@ -157,22 +162,19 @@ export default function Hero() {
             >
               <motion.a 
                 href="tel:07825447057" 
-                className="btn btn-primary text-lg shadow-xl shadow-red-600/20 px-8 py-4"
+                className="bg-[#BC3931] flex gap-2 items-center justify-center text-lg rounded-lg text-white shadow-xl shadow-[#BC3931]/20 px-6 py-2"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <div className="flex flex-col items-start leading-none">
-                   <span className="text-xs opacity-90 font-medium mb-0.5">Available 24/7</span>
-                   <span className="font-bold">Call 078 2549 7077</span> 
-                </div>
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
+                <Phone className="w-5 h-5"/>
+                 <span className="font-bold leading-none">Call 078 2549 7077</span> 
+                
+               
               </motion.a>
               
               <motion.a 
-                href="mailto:hello@electricjames.com"
-                className="px-8 py-4 rounded-full border border-slate-200 text-slate-700 font-semibold hover:border-slate-800 hover:text-slate-900 transition-colors bg-white hover:bg-slate-50"
+                href="mailto:hello@electricjamex.com"
+                className="px-4 py-2 rounded-full border border-slate-200 text-slate-700 font-semibold hover:border-slate-800 hover:text-slate-900 transition-colors bg-white hover:bg-slate-50"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -183,7 +185,7 @@ export default function Hero() {
 
           {/* Hero Image */}
           <motion.div 
-            className="relative h-[400px] lg:h-[600px] w-full"
+            className="relative h-100 lg:h-150 w-full"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
@@ -207,34 +209,36 @@ export default function Hero() {
                 priority
               />
               
-              {/* Glossy Overlay Reflection */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none" />
+              
+              
             </motion.div>
 
             {/* Floating Badge 1 */}
             <motion.div
-              className="absolute -left-8 top-1/4 bg-yellow-500 p-4 rounded-2xl shadow-xl z-20 max-w-[180px]"
+              className="absolute -left-8 top-1/4 bg-yellow-100 p-4 rounded-2xl shadow-xl z-20 max-w-45"
               animate={{ y: [0, 20, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             >
+              <div className="flex flex-col items-center justify-center">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                 <span className="font-bold text-gray-800 text-sm">Available Now</span>
               </div>
-              <p className="text-xs text-gray-500">Ready for emergency callouts in NW2</p>
+              <div className="flex flex-col items-center justify-center">
+             <span className="text-sm text-gray-700">Ready for callouts from NW2.</span>
+            <span className="text-sm font-bold">15+ Years Exp.</span>
+  </div>
+              </div>
+             
+               
             </motion.div>
             
-            {/* Floating Badge 2 */}
-            <motion.div
-              className="absolute -right-8 bottom-1/4 bg-blue-800 text-white p-6 rounded-2xl shadow-2xl z-20 border border-slate-700"
-              animate={{ y: [0, -20, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            >
-              <div className="text-center">
-                <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-white to-slate-200">15+</p>
-                <p className="text-xs uppercase tracking-widest text-slate-100 mt-1 font-semibold">Years Exp.</p>
-              </div>
-            </motion.div>
+         
+         
+              
+               
+            
+           
           </motion.div>
         </div>
       </div>

@@ -1,13 +1,21 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
+
 import { useState } from 'react';
 import { Phone,Cable } from 'lucide-react';
+import { usePathname } from "next/navigation"
+
+
+
+
 
 export default function Header() {
+
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+const pathName = usePathname();
 
   const services = [
     { name: 'Air Conditioning Services', href: '/electrical-services-in-nw2/air-conditioning-services' },
@@ -33,17 +41,25 @@ export default function Header() {
 
           {/* / Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            <Link href="/" className="text-gray-700 hover:text-primary font-medium transition-colors">
+            <Link href="/" className={`pathName ? "underline font-bold text-[#9A2D27] " : "text-gray-700 hover:text-primary transition-colors"`}>
               Home
             </Link>
+
+
+
             
             {/* Services Dropdown */}
             <div 
               className="relative"
               onMouseEnter={() => setServicesDropdownOpen(true)}
               onMouseLeave={() => setServicesDropdownOpen(false)}
+
             >
-              <button className="text-gray-700 hover:text-primary font-medium transition-colors flex items-center gap-1">
+
+
+
+              
+              <button type="button" className={`pathName ? "underline font-bold text-[#9A2D27] " : "text-gray-700 hover:text-primary transition-colors", "flex items-center gap-1"`}>
                 Services
                 <svg className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -56,7 +72,7 @@ export default function Header() {
                   <div className="bg-white rounded-lg shadow-xl border border-gray-200 py-2">
                     <Link
                       href="/electrical-services-in-nw2"
-                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors font-semibold border-b border-gray-100"
+                      className="block px-4 py-3 text-gray-700 hover:bg-[#F3E8FF] hover:text-primary transition-colors font-semibold border-b border-gray-100"
                     >
                       All Services
                     </Link>
@@ -64,7 +80,7 @@ export default function Header() {
                       <Link
                         key={service.href}
                         href={service.href}
-                        className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
+                        className="block px-4 py-3 text-gray-700 hover:bg-[#F3E8FF] hover:text-primary transition-colors"
                       >
                         {service.name}
                       </Link>
@@ -74,27 +90,27 @@ export default function Header() {
               )}
             </div>
 
-            <Link href="/locations" className="text-gray-700 hover:text-primary font-medium transition-colors">
+            <Link href="/locations" className={`pathName ? "underline font-bold text-[#9A2D27] " : "text-gray-700 hover:text-primary transition-colors"`}>
               Locations
             </Link>
 
-            <Link href="/blog" className="text-gray-700 hover:text-primary font-medium transition-colors">
+            <Link href="/blog"className={`pathName ? "underline font-bold text-[#9A2D27] " : "text-gray-700 hover:text-primary transition-colors"`}>
               Blog
             </Link>
             
-            <Link href="#contact" className="text-gray-700 hover:text-primary font-medium transition-colors">
+            <Link href="#contact" className={`pathName ? "underline font-bold text-[#9A2D27] " : "text-gray-700 hover:text-primary transition-colors"`}>
               Contact
             </Link>
           </div>
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:078254907077" className="group flex items-center gap-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full pl-4 pr-6 py-2.5 transition-all shadow-lg shadow-slate-900/20 hover:shadow-slate-900/30 hover:-translate-y-0.5">
+            <a href="tel:078254907077" className="group flex items-center gap-3 bg-[#BC3931] hover:bg-[#9A2D27] text-white rounded-full pl-4 pr-6 py-2.5 transition-all shadow-lg shadow-[#BC3931]/20 hover:shadow-[#BC3931]/30 hover:-translate-y-0.5">
               <div className="bg-white/10 p-1.5 rounded-full group-hover:bg-white/20 transition-colors">
                 <Phone className='w-4 h-4'/>
               </div>
               <div className="flex flex-col items-start leading-none">
-                <span className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">24/7 Emergency</span>
+
                 <span className="font-bold text-lg">078 2549 077</span>
               </div>
             </a>
@@ -102,6 +118,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
+          type="button"
             className="lg:hidden p-2 text-gray-700 hover:text-primary"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
@@ -127,6 +144,7 @@ export default function Header() {
               {/* Mobile Services */}
               <div className="rounded-lg overflow-hidden">
                 <button 
+                type="button"
                   className="w-full px-4 py-3 flex items-center justify-between text-slate-600 hover:bg-slate-50 hover:text-primary font-medium transition-colors"
                   onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                 >
@@ -170,8 +188,8 @@ export default function Header() {
                 Contact
               </Link>
 
-              <div className="mt-2 p-4 border-t border-gray-100">
-                <a href="tel:078254907077" className="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-3 rounded-xl shadow-lg shadow-primary/20 active:scale-95 transition-all">
+              <div className="mt-2 p-2 border-t border-gray-100">
+                <a href="tel:078254907077" className="w-full flex items-center bg-[#BC3931] justify-center gap-2 text-white font-bold py-3 rounded-xl shadow-lg shadow-[#BC3931]/20 active:scale-95 transition-all">
                   <Phone className="w-5 h-5" />
                   Call: 078 2549 077
                 </a>

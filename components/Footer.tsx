@@ -35,10 +35,10 @@ export default function Footer() {
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3 group">
               <div className="p-2 bg-slate-800 rounded-lg group-hover:bg-slate-700 transition-colors">
-                 <Cable className='w-8 h-8 text-red-500'/>
+                 <Cable className='w-8 h-8 text-[#BC3931]'/>
               </div>
               <span className="font-bold text-2xl text-white tracking-tight" style={{ fontFamily: 'var(--font-display)' }}>
-                Electric<span className="text-red-500">Jamex</span>
+                Electric<span className="text-[#BC3931]">Jamex</span>
               </span>
             </Link>
             
@@ -66,7 +66,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-bold mb-6 uppercase tracking-wider relative inline-block">
               Our Services
-              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-red-500 rounded-full"></span>
+              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#C18BFC] rounded-full"></span>
             </h3>
             <ul className="space-y-3">
               {services.map((service) => (
@@ -75,7 +75,7 @@ export default function Footer() {
                     href={service.href} 
                     className="flex items-center group hover:text-white transition-colors duration-300"
                   >
-                    <ChevronRight className="w-4 h-4 text-red-500 mr-2 opacity-0 group-hover:opacity-100 transition-all transform -translate-x-2 group-hover:translate-x-0" />
+                    <ChevronRight className="w-4 h-4 text-[#C18BFC] mr-2 opacity-0 group-hover:opacity-100 transition-all transform -translate-x-2 group-hover:translate-x-0" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">{service.name}</span>
                   </Link>
                 </li>
@@ -87,7 +87,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-bold mb-6 uppercase tracking-wider relative inline-block">
               Service Areas
-              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-red-500 rounded-full"></span>
+              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#C18BFC] rounded-full"></span>
             </h3>
             <div className="grid grid-cols-1 gap-2">
               {areas.map((area) => (
@@ -103,17 +103,17 @@ export default function Footer() {
           <div>
              <h3 className="text-white text-lg font-bold mb-6 uppercase tracking-wider relative inline-block">
               Get in Touch
-              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-red-500 rounded-full"></span>
+              <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#C18BFC] rounded-full"></span>
             </h3>
             <ul className="space-y-6">
               <li>
                 <div className="flex items-start gap-4 group">
-                  <div className="p-3 bg-red-500/10 rounded-full group-hover:bg-red-500 transition-colors duration-300">
-                    <Phone className="w-5 h-5 text-red-500 group-hover:text-white transition-colors" />
+                  <div className="p-3 bg-[#BC3931]/10 rounded-full group-hover:bg-[#BC3931] transition-colors duration-300">
+                    <Phone className="w-5 h-5 text-[#BC3931] group-hover:text-white transition-colors" />
                   </div>
                   <div>
                     <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-1">Mobile</p>
-                    <a href="tel:07825490707" className="text-lg text-white font-bold hover:text-red-400 transition-colors block">
+                    <a href="tel:07825490707" className="text-lg text-white font-bold hover:text-[#C18BFC] transition-colors block">
                       078 2549 0707
                     </a>
                   </div>

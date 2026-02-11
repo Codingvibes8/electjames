@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
 @import "tailwindcss";
 
-/* Design System - Original Electric James Colors */
+/* Design System - Electric James Brand Colors */
 :root {
   /* Primary Colors - Electric James Red */
-  --color-primary: #D32F2F;
-  /* Vibrant, professional red */
-  --color-primary-dark: #B71C1C;
+  --color-primary: #BC3931;
+  /* Bold, professional red */
+  --color-primary-dark: #9A2D27;
   /* Deep red for hover states */
-  --color-primary-light: #FFEBEE;
+  --color-primary-light: #F5E0DF;
   /* Light red background */
 
-  /* Accent Colors - Trustworthy Navy */
-  --color-accent: #0F172A;
-  /* Deep Navy Blue */
-  --color-accent-hover: #1E293B;
-  /* Slightly lighter navy */
-  --color-accent-light: #F1F5F9;
-  /* Light slate background */
+  /* Accent Colors - Vibrant Purple */
+  --color-accent: #C18BFC;
+  /* Vivid purple */
+  --color-accent-hover: #A96EE8;
+  /* Darker purple for hover */
+  --color-accent-light: #F3E8FF;
+  /* Light purple background */
 
   /* Link Color */
-  --color-link: #0369A1;
-  --color-link-hover: #0284C7;
+  --color-link: #C18BFC;
+  --color-link-hover: #A96EE8;
 
   /* Neutral Colors */
   --background: #FFFFFF;
@@ -137,7 +137,7 @@ h4 {
 
 /* Gradient Text Utility */
 .text-gradient {
-  background: linear-gradient(to right, lab(27.41% 53.05 -34.74), #f97316, #3b82f6);
+  background: linear-gradient(to right, #C18BFC, #BC3931, #C18BFC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -94,12 +94,12 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="section-lg bg-linear-to-br from-slate-200 via-red-800 to-primary-dark text-gray-800">
+      <section id="contact" className="section-lg bg-linear-to-br from-[#9A2D27] via-[#BC3931] to-[#7A2320] text-white">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6" style={{ fontFamily: 'var(--font-poppins)' }}>
             Need an Electrician?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
             Get in touch today for a free quote or emergency electrical services. 
             We're here to help with all your electrical needs.
           </p>

@@ -54,7 +54,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-xl">
+    <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-xl px-4 md:px-16 lg:px-32">
       {isSuccess ? (
         <div className="flex flex-col items-center justify-center py-12 text-center space-y-4 animate-in fade-in duration-500">
           <CheckCircle2 className="w-16 h-16 text-green-500" />

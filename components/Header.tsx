@@ -27,8 +27,8 @@ const pathName = usePathname();
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
-      <nav className="container mx-auto">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300  px-4 md:px-16 lg:px-32">
+      <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center justify-start gap-2 group">
@@ -135,7 +135,7 @@ const pathName = usePathname();
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden absolute top-auto left-0 w-full bg-white border-b border-gray-100 shadow-xl fade-in z-40">
+          <div className="lg:hidden absolute top-auto left-0 w-full bg-white border-b border-gray-100 shadow-xl fade-in z-40 ">
             <div className="flex flex-col p-4 gap-2">
               <Link href="/" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-primary font-medium transition-colors">
                 Home

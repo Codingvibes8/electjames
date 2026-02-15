@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="section-lg bg-gradient-to-br from-primary to-primary-dark text-white">
+      <section id="contact" className="section-lg bg-linear-to-br from-slate-200 via-red-800 to-primary-dark text-white">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6" style={{ fontFamily: 'var(--font-poppins)' }}>
             Need an Electrician?

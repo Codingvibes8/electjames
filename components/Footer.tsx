@@ -26,10 +26,11 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-slate-900 text-slate-300 border-t border-slate-800 pt-20  px-4 md:px-16 lg:px-32">
+    <footer className="bg-slate-900 text-slate-300 border-t border-slate-800">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="px-4 md:px-16 lg:px-32 pt-20 pb-16">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           
           {/* Column 1: Brand & About */}
           <div className="space-y-6">
@@ -149,12 +150,13 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+          </div>
         </div>
       </div>
 
       {/* Bottom Legal Bar */}
-      <div className="bg-slate-950 border-t border-slate-900">
-        <div className="container mx-auto px-4 py-6">
+      <div className="bg-slate-950 border-t border-slate-900 w-full py-10">
+        <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
             <div className="text-center md:text-left">
               <p>&copy; {currentYear} Electric Jamex. All rights reserved.</p>
@@ -164,7 +166,7 @@ export default function Footer() {
                  <span>Part P certified</span>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-6">
                <Link href="/privacy-policy" className="hover:text-slate-300 transition-colors">
                   Privacy Policy

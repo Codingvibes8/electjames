@@ -44,7 +44,7 @@ export default function Hero() {
     delay: Math.random() * 5,
     opacity: Math.random() * 0.3 + 0.1, // 0.1-0.4
   }));
-lg
+
   return (
     <section 
       ref={ref}

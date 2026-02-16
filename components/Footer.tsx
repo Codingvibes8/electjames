@@ -27,6 +27,29 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-900 text-slate-300 border-t border-slate-800">
+      {/* Trust Badge Banner */}
+      <div className="border-b border-slate-800 py-6">
+        <div className="container mx-auto px-4 flex flex-wrap items-center justify-center gap-8">
+          <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Certified & Accredited</span>
+          <div className="flex items-center gap-6">
+            <Image
+              src="/my-napit-badge.png"
+              alt="NAPIT Approved Electrical Contractor"
+              width={48}
+              height={48}
+              className="object-contain drop-shadow-lg brightness-110"
+            />
+            <Image
+              src="/which-rounded-full.webp"
+              alt="Which? Trusted Trader Certified Electrician"
+              width={48}
+              height={48}
+              className="object-contain drop-shadow-lg brightness-110"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Main Footer Content */}
       <div className="px-4 md:px-16 lg:px-32 pt-20 pb-16">
         <div className="container mx-auto">
@@ -34,7 +57,7 @@ export default function Footer() {
           
           {/* Column 1: Brand & About */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href="/" className="flex items-center gap-2 group">
               <div className="p-2 bg-slate-800 rounded-lg group-hover:bg-slate-700 transition-colors">
                  <Cable className='w-8 h-8 text-[#BC3931]'/>
               </div>
@@ -48,18 +71,21 @@ export default function Footer() {
               Top-rated for safety, quality, and customer service.
             </p>
 
-            <div className="pt-4">
-              <div className="relative w-24 h-24 bg-white/5 rounded-lg p-2 flex items-center justify-center">
-                 {/* Napit Badge Container - improved visibility */}
-                 <div className="relative w-full h-full">
-                    <Image
-                      src="/images/napit-badge.png"
-                      alt="NAPIT Part P Approved"
-                      fill
-                      className="object-contain"
-                    />
-                 </div>
-              </div>
+            <div className="pt-4 flex items-center gap-4">
+              <Image
+                src="/my-napit-badge.png"
+                alt="NAPIT Approved Electrical Contractor"
+                width={52}
+                height={52}
+                className="object-contain drop-shadow-lg brightness-110"
+              />
+              <Image
+                src="/which-rounded-full.webp"
+                alt="Which? Trusted Trader Certified Electrician"
+                width={52}
+                height={52}
+                className="object-contain drop-shadow-lg brightness-110"
+              />
             </div>
           </div>
 

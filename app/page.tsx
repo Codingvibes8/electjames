@@ -1,6 +1,7 @@
-import Image from 'next/image';
+
 import ServiceCard from '@/components/ServiceCard';
 import Hero from '@/components/Hero';
+import Image from 'next/image';
 
 export default function Home() {
   const services = [
@@ -63,6 +64,41 @@ export default function Home() {
             {services.map((service) => (
               <ServiceCard key={service.href} {...service} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Accreditations & Trust Section */}
+      <section className="py-12 bg-gray-50 border-y border-gray-200">
+        <div className="container mx-auto px-4">
+          <p className="text-center text-sm font-semibold text-gray-500 uppercase tracking-widest mb-8">
+            Accredited & Trusted By
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+            <div className="flex flex-col items-center gap-3">
+              <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                <Image
+                  src="/my-napit-badge.png"
+                  alt="NAPIT Approved Electrical Contractor - Certified for domestic and commercial electrical work"
+                  width={90}
+                  height={90}
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-xs font-semibold text-gray-600 tracking-wide">NAPIT Approved</span>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+                <Image
+                  src="/which-rounded-full.webp"
+                  alt="Which? Trusted Trader - Vetted and endorsed by Which? for quality electrical services"
+                  width={90}
+                  height={90}
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-xs font-semibold text-gray-600 tracking-wide">Which? Trusted Trader</span>
+            </div>
           </div>
         </div>
       </section>

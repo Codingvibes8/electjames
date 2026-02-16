@@ -37,7 +37,7 @@ export default function Header() {
               <div className="absolute -top-1 -right-1 w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
             </div>
             <span className="font-display font-bold text-xl sm:text-2xl xl:text-3xl text-slate-800 tracking-tight">
-              Electric<span className="text-primary">James</span>
+              Electric<span className="text-primary">Jamex</span>
             </span>
           </Link>
 

@@ -103,7 +103,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <motion.h1 
-              className="text-4xl lg:text-5xl font-bold mb-6 text-gradient tracking-tight"
+              className="text-4xl pt-20 lg:text-5xl font-bold mb-6 text-gradient tracking-tight"
               style={{ fontFamily: 'var(--font-poppins)' }}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -131,26 +131,33 @@ export default function Hero() {
             </motion.p>
             
             {/* Trust Badges */}
-            <motion.div 
-              className="flex flex-wrap items-center gap-4 mb-10"
+            <motion.div
+              className="flex flex-wrap items-center gap-3 mb-10"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              {[
-                "NAPIT Approved", 
-                "Which? Trusted Trader", 
-                "Part P Certified"
-              ].map((badge) => (
-                <motion.div 
-                  key={badge}
-                  className="flex items-center gap-2 text-slate-700 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm hover:border-primary/20 transition-colors"
-                  whileHover={{ y: -2, scale: 1.02 }}
-                >
-                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="font-semibold text-sm tracking-wide">{badge}</span>
-                </motion.div>
-              ))}
+              <motion.div
+                className="flex items-center gap-3 text-slate-700 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm hover:border-primary/20 transition-colors"
+                whileHover={{ y: -2, scale: 1.02 }}
+              >
+                <Image src="/my-napit-badge.png" alt="NAPIT Approved Electrical Contractor" width={44} height={44} className="rounded-full" />
+                <span className="font-semibold text-sm tracking-wide">NAPIT Approved</span>
+              </motion.div>
+              <motion.div
+                className="flex items-center gap-3 text-slate-700 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm hover:border-primary/20 transition-colors"
+                whileHover={{ y: -2, scale: 1.02 }}
+              >
+                <Image src="/which-rounded-full.webp" alt="Which? Trusted Trader Certified Electrician" width={44} height={44} className="rounded-full" />
+                <span className="font-semibold text-sm tracking-wide">Which? Trusted Trader</span>
+              </motion.div>
+              <motion.div
+                className="flex items-center gap-2 text-slate-700 bg-white border border-slate-200 px-4 py-2 rounded-full shadow-sm hover:border-primary/20 transition-colors"
+                whileHover={{ y: -2, scale: 1.02 }}
+              >
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="font-semibold text-sm tracking-wide">Part P Certified</span>
+              </motion.div>
             </motion.div>
 
             {/* CTA Buttons */}

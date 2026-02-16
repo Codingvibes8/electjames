@@ -295,7 +295,7 @@ const blogPosts: Record<string, BlogPost> = {
             <p className="text-gray-600">Most popular for home use. Requires dedicated circuit. Fully charges most EVs in 4-8 hours. This is what we typically install at UK homes.</p>
           </div>
           <div className="bg-blue-50 p-6 rounded-lg border border-blue-100">
-            <h3 className="font-bold text-gray-900 mb-2">Rapid Chargers (>22kW)</h3>
+            <h3 className="font-bold text-gray-900 mb-2">Rapid Chargers ({'>'}22kW)</h3>
             <p className="text-gray-600">Requires three-phase supply. Charges battery to 80% in 20-30 minutes. More suited to public charging networks or commercial use.</p>
           </div>
         </div>
